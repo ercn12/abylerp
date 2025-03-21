@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+/* Tema renkleri */
+:root {
+  --color-primary-light: #5D5CDE;
+  --color-primary-dark: #6E6DE1;
+  --color-secondary-light: #FF6B6B;
+  --color-secondary-dark: #FF7F7F;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Temel renkler - Tailwind yardımcı sınıfları */
+.text-primary-light { color: var(--color-primary-light) !important; }
+.text-primary-dark { color: var(--color-primary-dark) !important; }
+.bg-primary-light { background-color: var(--color-primary-light) !important; }
+.bg-primary-dark { background-color: var(--color-primary-dark) !important; }
+.text-secondary-light { color: var(--color-secondary-light) !important; }
+.text-secondary-dark { color: var(--color-secondary-dark) !important; }
+.bg-secondary-light { background-color: var(--color-secondary-light) !important; }
+.bg-secondary-dark { background-color: var(--color-secondary-dark) !important; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Renkli arkaplanlar için opacity */
+.bg-opacity-20 { opacity: 0.2; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Hover efektleri */
+.hover\:bg-opacity-90:hover { opacity: 0.9; }
+.hover\:text-white:hover { color: white !important; }
+.hover\:text-primary-light:hover { color: var(--color-primary-light) !important; }
+.hover\:border-primary-light:hover { border-color: var(--color-primary-light) !important; }
+.hover\:underline:hover { text-decoration: underline; }
+.hover\:-translate-y-2:hover { transform: translateY(-0.5rem); }
+.hover\:scale-105:hover { transform: scale(1.05); }
+.hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Geçiş animasyonları */
+.transition-colors { transition-property: color, background-color, border-color; }
+.transition-transform { transition-property: transform; }
+.transition-all { transition-property: all; }
+.duration-200 { transition-duration: 200ms; }
+.duration-300 { transition-duration: 300ms; }

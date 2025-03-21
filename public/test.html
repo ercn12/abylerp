@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Test</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#5D5CDE',
+                            dark: '#6E6DE1',
+                        },
+                        secondary: {
+                            light: '#FF6B6B',
+                            dark: '#FF7F7F',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-primary-light mb-4">Tailwind Test</h1>
+        <p class="mb-4">Bu renk mor olmalı ve Font Awesome ikonları görünmeli.</p>
+        <div class="flex space-x-4">
+            <i class="fas fa-music text-secondary-light text-2xl"></i>
+            <i class="fas fa-star text-yellow-500 text-2xl"></i>
+            <i class="fas fa-heart text-red-500 text-2xl"></i>
+        </div>
+        <button class="mt-4 bg-primary-light text-white px-4 py-2 rounded-lg">
+            Test Buton
+        </button>
+    </div>
+</body>
+</html>

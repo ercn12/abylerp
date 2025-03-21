@@ -24,7 +24,84 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <!-- Tailwind CSS CDN -->
+    <!-- Önce CDN'i yükleyin, sonra config'i tanımlayın -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                light: '#5D5CDE',
+                dark: '#6E6DE1',
+              },
+              secondary: {
+                light: '#FF6B6B',
+                dark: '#FF7F7F',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Özel Renkler için Style -->
+    <style>
+      :root {
+        --color-primary-light: #5D5CDE;
+        --color-primary-dark: #6E6DE1;
+        --color-secondary-light: #FF6B6B;
+        --color-secondary-dark: #FF7F7F;
+      }
+      
+      /* Ana renkler */
+      .text-primary-light { color: #5D5CDE !important; }
+      .bg-primary-light { background-color: #5D5CDE !important; }
+      .text-primary-dark { color: #6E6DE1 !important; }
+      .bg-primary-dark { background-color: #6E6DE1 !important; }
+      .text-secondary-light { color: #FF6B6B !important; }
+      .bg-secondary-light { background-color: #FF6B6B !important; }
+      .text-secondary-dark { color: #FF7F7F !important; }
+      .bg-secondary-dark { background-color: #FF7F7F !important; }
+      .border-primary-light { border-color: #5D5CDE !important; }
+      
+      /* Kategori renkleri */
+      .bg-pink-500 { background-color: #EC4899 !important; }
+      .bg-blue-500 { background-color: #3B82F6 !important; }
+      .bg-green-500 { background-color: #10B981 !important; }
+      .bg-yellow-500 { background-color: #F59E0B !important; }
+      .bg-purple-500 { background-color: #8B5CF6 !important; }
+      
+      /* Yardımcı renkler */
+      .text-white { color: white !important; }
+      .text-gray-400 { color: #9CA3AF !important; }
+      .text-gray-500 { color: #6B7280 !important; }
+      .text-gray-600 { color: #4B5563 !important; }
+      .text-gray-700 { color: #374151 !important; }
+      .text-gray-800 { color: #1F2937 !important; }
+      .text-gray-900 { color: #111827 !important; }
+      .bg-white { background-color: white !important; }
+      .bg-gray-50 { background-color: #F9FAFB !important; }
+      .bg-gray-100 { background-color: #F3F4F6 !important; }
+      .bg-gray-200 { background-color: #E5E7EB !important; }
+      .bg-gray-800 { background-color: #1F2937 !important; }
+      .bg-blue-100 { background-color: #DBEAFE !important; }
+      .text-blue-800 { color: #1E40AF !important; }
+      
+      /* Opacity */
+      .bg-opacity-20 { opacity: 0.2 !important; }
+      
+      /* Border */
+      .border-gray-300 { border-color: #D1D5DB !important; }
+      .border-gray-600 { border-color: #4B5563 !important; }
+      .border-gray-700 { border-color: #374151 !important; }
+      .border-t { border-top-width: 1px !important; }
+    </style>
+    
+    <title>Abylerp - Ses Klipleriyle Eğlencenin Merkezi</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
